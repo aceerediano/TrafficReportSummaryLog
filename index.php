@@ -14,25 +14,37 @@
   div.container {
     width: 100%;
     border: 1px white;
+
 }
 
 header, footer {
     padding: 2em;
-    color: black;
-    background-color: #44ffd9;
+    color: white;
+    background-color:#1b1b1b;
     
     clear: left;
     text-align: center;
     font-family: tahoma;
 }
+legend {
+    
+    color: white;
+    
+    
+    
+}
 
+a.navbar-brand, div.navbar-brand {
 
+    color: white;
+}
 
 
 
 article {
     margin-left: 170px;
     border-left: 1px black;
+
     padding: 2em;
     overflow: hidden;
 }
@@ -44,6 +56,21 @@ article {
 </head>
 <body>
 
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" >SPOOR</a>
+      <ul class="nav navbar-nav">
+      <li class="active"><a href="main.html">Maps</a></li>
+      
+    </ul>
+    
+    </div>
+    
+
+    
+  </div>
+</nav> 
 
 <header>
 <br><h1 class="col-md-85 text-center"><legend>Spoor® Traffic Report Summary Log</legend></h1><br>
@@ -71,7 +98,7 @@ article {
         </thead>
         <tbody>
              <?php
-            $sql = "SELECT * FROM summary WHERE active = 1";
+            $sql = "SELECT * FROM summary WHERE active =1";
             $result = $connect->query($sql);
  
             if($result->num_rows > 0) {
